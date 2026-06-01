@@ -51,15 +51,12 @@ export function Header() {
             className="relative group flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
           >
-            {/* Logo Icon */}
-
-
-            <div className="hidden sm:flex items-center gap-3">
-              <h1 className="text-xl font-black tracking-tight text-white md:text-2xl">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <h1 className="text-lg font-black tracking-tight text-white sm:text-xl md:text-2xl">
                 STUDIOX<span className="text-accent">.</span>
               </h1>
 
-              <div className="relative h-6 overflow-hidden">
+              <div className="relative hidden h-6 overflow-hidden sm:block">
                 <motion.div
                   animate={{
                     y: [0, 0, -24, -24, -48, -48, -72, -72],

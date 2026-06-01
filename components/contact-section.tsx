@@ -8,7 +8,6 @@ export function ContactSection() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    projectType: "",
     message: "",
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -28,15 +27,8 @@ export function ContactSection() {
     setTimeout(() => setIsSubmitted(false), 3000)
   }
 
-  const projectTypes = [
-    { value: "short", label: "Short Reels", desc: "15-60 seconds" },
-    { value: "long", label: "Long Form", desc: "Documentaries, Films" },
-    { value: "commercial", label: "Commercial", desc: "Ads, Promos" },
-    { value: "music", label: "Music Video", desc: "Full production" },
-  ]
-
   return (
-    <section id="contact" ref={containerRef} className="relative py-32 overflow-hidden">
+    <section id="contact" ref={containerRef} className="relative py-20 md:py-32 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div 
@@ -51,22 +43,22 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-14 md:mb-20"
         >
           <span className="text-accent text-sm tracking-[0.2em] uppercase block mb-6">
             Contact
           </span>
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
+          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
             Let&apos;s create
             <br />
             <span className="text-muted-foreground">together</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to bring your vision to life? Drop me a line and let&apos;s discuss your next project.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-12">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-12">
           {/* Left - Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -88,14 +80,14 @@ export function ContactSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group flex items-center gap-4 p-6 bg-card border border-border hover:border-accent transition-all"
+                  className="group flex items-center gap-4 p-4 md:p-6 bg-card border border-border hover:border-accent transition-all"
                 >
                   <div className="p-3 bg-secondary group-hover:bg-accent transition-colors">
                     <item.icon className="w-5 h-5 group-hover:text-background transition-colors" />
                   </div>
                   <div className="flex-1">
                     <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{item.label}</div>
-                    <div className="font-medium">{item.value}</div>
+                    <div className="font-medium break-all sm:break-normal">{item.value}</div>
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors" />
                 </motion.a>
@@ -111,33 +103,7 @@ export function ContactSection() {
             transition={{ delay: 0.2 }}
             className="lg:col-span-8"
           >
-            <form onSubmit={handleSubmit} className="bg-card border border-border p-8 md:p-12">
-              {/* Project Type Selection */}
-              <div className="mb-10">
-                <label className="block text-sm uppercase tracking-wider text-muted-foreground mb-4">
-                  What type of project?
-                </label>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  {projectTypes.map((type) => (
-                    <motion.button
-                      key={type.value}
-                      type="button"
-                      onClick={() => setFormState({ ...formState, projectType: type.value })}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className={`p-4 text-left border transition-all ${
-                        formState.projectType === type.value
-                          ? "border-accent bg-accent/10"
-                          : "border-border hover:border-accent/50"
-                      }`}
-                    >
-                      <div className="font-medium mb-1">{type.label}</div>
-                      <div className="text-xs text-muted-foreground">{type.desc}</div>
-                    </motion.button>
-                  ))}
-                </div>
-              </div>
-
+            <form onSubmit={handleSubmit} className="bg-card border border-border p-6 md:p-12">
               {/* Form Fields */}
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 {[

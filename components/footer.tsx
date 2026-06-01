@@ -21,7 +21,7 @@ export function Footer() {
   return (
     <footer ref={containerRef} className="relative overflow-hidden">
       {/* Giant CTA Section */}
-      <div className="relative py-32 md:py-48">
+      <div className="relative py-20 md:py-48">
         {/* Background Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
           <motion.span 
@@ -44,12 +44,12 @@ export function Footer() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block text-accent text-sm tracking-[0.3em] uppercase mb-8"
+            className="inline-block text-accent text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-6 md:mb-8"
             >
               Ready to Start?
             </motion.span>
             
-            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] mb-8">
+            <h2 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold leading-[1.05] mb-8">
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
+              className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 md:mb-12"
             >
               Let&apos;s collaborate to create something that captures attention, 
               evokes emotion, and leaves a lasting impression.
@@ -89,7 +89,7 @@ export function Footer() {
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center gap-4 px-12 py-6 bg-foreground text-background text-xl font-semibold relative overflow-hidden"
+              className="group inline-flex items-center gap-3 px-7 py-4 md:px-12 md:py-6 bg-foreground text-background text-base md:text-xl font-semibold relative overflow-hidden"
             >
               <span className="relative z-10">Start a Project</span>
               <Play className="w-6 h-6 relative z-10" fill="currentColor" />
@@ -107,20 +107,62 @@ export function Footer() {
       {/* Footer Bottom */}
       <div className="border-t border-border">
         <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-24 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6">
             {/* Logo */}
-            <motion.a 
+            <motion.a
               href="#"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="font-display text-2xl font-bold tracking-tight"
+              className="relative group flex items-center gap-3"
             >
-              StudioX
+              <h1 className="text-lg font-black tracking-tight text-white sm:text-xl md:text-2xl">
+                STUDIOX<span className="text-accent">.</span>
+              </h1>
+
+              <div className="relative hidden h-6 overflow-hidden sm:block">
+                <motion.div
+                  animate={{
+                    y: [0, 0, -24, -24, -48, -48, -72, -72],
+                  }}
+                  transition={{
+                    duration: 6,
+                    times: [0, 0.28, 0.56, 1],
+                    repeat: Infinity,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
+                  className="flex flex-col"
+                >
+                  <span
+                    className="h-6 text-sm italic tracking-[0.15em] text-zinc-400"
+                    style={{ fontFamily: "cursive" }}
+                  >
+                    Edits
+                  </span>
+                  <span
+                    className="h-6 text-sm italic tracking-[0.15em] text-zinc-400"
+                    style={{ fontFamily: "cursive" }}
+                  >
+                    Creates
+                  </span>
+                  <span
+                    className="h-6 text-sm italic tracking-[0.15em] text-zinc-400"
+                    style={{ fontFamily: "cursive" }}
+                  >
+                    Directs
+                  </span>
+                  <span
+                    className="h-6 text-sm italic tracking-[0.15em] text-zinc-400"
+                    style={{ fontFamily: "cursive" }}
+                  >
+                    Edits
+                  </span>
+                </motion.div>
+              </div>
             </motion.a>
 
             {/* Nav Links */}
-            <nav className="flex flex-wrap justify-center items-center gap-8">
+            <nav className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
               {["Work", "About", "Testimonials", "Contact"].map((item, i) => (
                 <motion.a
                   key={item}
@@ -138,8 +180,8 @@ export function Footer() {
             </nav>
 
             {/* Right */}
-            <div className="flex items-center gap-6">
-              <span className="text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+              <span className="text-xs sm:text-sm text-muted-foreground text-center">
                 &copy; {new Date().getFullYear()} All rights reserved
               </span>
               <motion.button

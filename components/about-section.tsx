@@ -29,7 +29,7 @@ export function AboutSection() {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100])
 
   return (
-    <section id="about" ref={containerRef} className="relative py-32 overflow-hidden">
+    <section id="about" ref={containerRef} className="relative py-20 md:py-32 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div 
@@ -48,19 +48,19 @@ export function AboutSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-24"
+          className="mb-16 md:mb-24"
         >
           <span className="text-accent text-sm tracking-[0.2em] uppercase block mb-6">
             About
           </span>
           <div className="grid lg:grid-cols-2 gap-12">
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1]">
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1]">
               Crafting visuals
               <br />
               <span className="text-muted-foreground">since 2024</span>
             </h2>
             <div className="flex flex-col justify-end">
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+              <p className="text-base md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 I&apos;m Sanjay Sondhiya, a video editor and motion designer based in Los Angeles. 
                 For over 2 years, I&apos;ve been transforming raw footage into visual stories 
                 that captivate audiences and drive results.
@@ -96,7 +96,7 @@ export function AboutSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-card border border-border p-8"
+              className="bg-card border border-border p-6 md:p-8"
             >
               <h3 className="text-sm text-muted-foreground uppercase tracking-widest mb-8">
                 Core Skills
@@ -137,7 +137,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-card border border-border p-8 overflow-hidden"
+              className="bg-card border border-border p-6 md:p-8 overflow-hidden"
             >
               <h3 className="text-sm text-muted-foreground uppercase tracking-widest mb-6">
                 Tools & Software
@@ -168,9 +168,9 @@ export function AboutSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-24 pt-24 border-t border-border"
+          className="mt-16 pt-16 md:mt-24 md:pt-24 border-t border-border"
         >
-          <blockquote className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center max-w-4xl mx-auto leading-tight">
+          <blockquote className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-center max-w-4xl mx-auto leading-tight">
             &ldquo;Every frame tells a story.
             <br />
             <span className="text-muted-foreground">My job is to make sure it&apos;s unforgettable.&rdquo;</span>

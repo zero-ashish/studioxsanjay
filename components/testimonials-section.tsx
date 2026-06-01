@@ -1,8 +1,8 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Quote, Star, Play, ArrowUpRight } from "lucide-react"
+import { motion, useScroll } from "framer-motion"
+import { Quote, Star, Play } from "lucide-react"
 
 const testimonials = [
   {
@@ -66,7 +66,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group relative bg-card border border-border p-8 hover:border-accent/50 transition-all duration-500"
+      className="group relative bg-card border border-border p-6 md:p-8 hover:border-accent/50 transition-all duration-500"
     >
       {/* Quote Icon */}
       <Quote className="w-10 h-10 text-accent/20 mb-6" />
@@ -79,7 +79,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
       </div>
 
       {/* Quote */}
-      <blockquote className="text-lg leading-relaxed mb-8">
+      <blockquote className="text-base md:text-lg leading-relaxed mb-8">
         &ldquo;{testimonial.quote}&rdquo;
       </blockquote>
 
@@ -186,27 +186,25 @@ export function TestimonialsSection() {
     offset: ["start end", "end start"]
   })
   
-  const x = useTransform(scrollYProgress, [0, 1], [0, -100])
-
   const featured = testimonials.filter(t => t.featured)
   const others = testimonials.filter(t => !t.featured)
 
   return (
-    <section id="testimonials" ref={containerRef} className="py-32 overflow-hidden">
+    <section id="testimonials" ref={containerRef} className="py-20 md:py-32 overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-24">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-14 md:mb-20"
         >
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <div>
               <span className="text-accent text-sm tracking-[0.2em] uppercase block mb-6">
                 Testimonials
               </span>
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1]">
+              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1]">
                 Words from
                 <br />
                 <span className="text-muted-foreground">collaborators</span>
@@ -216,7 +214,7 @@ export function TestimonialsSection() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-xl text-muted-foreground max-w-lg"
+              className="text-base md:text-xl text-muted-foreground max-w-lg"
             >
               Hear from the brands and creators I have had the privilege to collaborate with 
               over the past 2 years.
@@ -232,7 +230,7 @@ export function TestimonialsSection() {
         </div> */}
 
         {/* Other Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6">
           {others.map((testimonial, i) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} index={i} />
           ))}
