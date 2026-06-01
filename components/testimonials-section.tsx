@@ -85,13 +85,13 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
 
       {/* Author */}
       <div className="flex items-center gap-4">
-        <motion.img
+        {/* <motion.img
           src={testimonial.avatar}
           alt={testimonial.name}
           className="w-14 h-14 object-cover"
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
-        />
+        /> */}
         <div>
           <div className="font-display font-semibold">{testimonial.name}</div>
           <div className="text-sm text-muted-foreground">

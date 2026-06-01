@@ -12,8 +12,11 @@ const skills = [
 ]
 
 const tools = [
-  "Premiere Pro", "After Effects", "DaVinci Resolve", "Cinema 4D", 
-  "Final Cut Pro", "Pro Tools", "Logic Pro", "Mocha Pro"
+  "Adobe Premiere Pro",
+  "Adobe After Effect",
+  "Adobe Photoshop",
+  "DaVinci Resolve",
+  "Capcut",
 ]
 
 export function AboutSection() {
@@ -54,7 +57,7 @@ export function AboutSection() {
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1]">
               Crafting visuals
               <br />
-              <span className="text-muted-foreground">since 2016</span>
+              <span className="text-muted-foreground">since 2024</span>
             </h2>
             <div className="flex flex-col justify-end">
               <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
@@ -78,8 +81,8 @@ export function AboutSection() {
           >
             <div className="relative aspect-[4/5] overflow-hidden group">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&facepad=2"
-                alt="StudioX - Video Editor"
+                src="/Sanjay.png"
+                alt="Sanjay Sondhiya"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
