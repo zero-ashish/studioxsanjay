@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Marcus Cole | Video Editor & Motion Designer',
+  title: 'StudioX | Video Editor & Motion Designer',
   description: 'Award-winning video editor specializing in short-form content, long-form documentaries, and cinematic storytelling. Transforming raw footage into compelling visual narratives.',
   generator: 'v0.app',
   icons: {

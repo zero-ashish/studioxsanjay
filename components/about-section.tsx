@@ -79,7 +79,7 @@ export function AboutSection() {
             <div className="relative aspect-[4/5] overflow-hidden group">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&facepad=2"
-                alt="Marcus Cole - Video Editor"
+                alt="StudioX - Video Editor"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
