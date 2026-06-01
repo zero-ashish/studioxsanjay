@@ -116,7 +116,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="font-display text-2xl font-bold tracking-tight"
             >
-              StudioX<span className="text-accent">.</span>COLE
+              StudioX
             </motion.a>
 
             {/* Nav Links */}
