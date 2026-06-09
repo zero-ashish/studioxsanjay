@@ -30,7 +30,7 @@ const testimonials = [
   {
     id: 3,
     name: "FoodForFoodies",
-    role: "Video Editor",
+    role: "Content creator",
     company: "Tesla",
     quote: "The quality of Sanjay's editing made a huge difference to our content. His transitions, timing, and attention to detail helped bring our vision to life. Highly recommended.",
     rating: 5,
@@ -40,7 +40,7 @@ const testimonials = [
   {
     id: 4,
     name: "Anjali Sondhiya",
-    role: "Video Editor",
+    role: "Content creator",
     company: "Universal Music",
     quote: "Sanjay is reliable, talented, and easy to work with. He understood the style we were aiming for and delivered a final product that felt polished and engaging. Looking forward to future projects together.",
     rating: 5,
@@ -50,7 +50,7 @@ const testimonials = [
   {
     id: 5,
     name: "Aksh Verma",
-    role: "Video Editor",
+    role: "Content creator",
     company: "Apple",
     quote: "Sanjay has a great eye for detail and storytelling. He transformed raw footage into an engaging video that kept viewers hooked from start to finish. I would happily work with him again.",
     rating: 5,
